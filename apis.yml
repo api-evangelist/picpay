@@ -1,0 +1,216 @@
+aid: picpay
+name: PicPay
+description: >-
+  PicPay is a Brazilian fintech super-app and digital bank serving over
+  67 million users with a digital wallet, payment account, credit and
+  debit cards, personal loans, investments (Cofrinho / fixed income),
+  insurance, and PIX-based money movement. Founded in 2012 and acquired
+  by J&F Investimentos (the holding company behind JBS) in 2015, PicPay
+  is controlled today by J&F Participações and in 2024 incorporated the
+  retail customer base of Banco Original to consolidate the group's
+  consumer banking strategy. For developers and merchants, PicPay
+  Business exposes a set of REST APIs that let online stores accept the
+  PicPay wallet, credit/debit cards, PIX, and payment links as payment
+  methods. The historical Ecommerce Public API on appws.picpay.com is
+  authenticated with the x-picpay-token / x-seller-token headers and
+  remains in use for direct wallet checkout. A newer unified business
+  developer portal at developers-business.picpay.com publishes the
+  Gateway PicPay Checkout API, Carteira PicPay Wallet API, PIX API, and
+  Payment Link API, all of which now use OAuth 2.0 client_credentials
+  bearer JWTs minted at api.picpay.com/oauth2/token (5-minute TTL) and
+  webhook callbacks for payment status notifications. PicPay also
+  publishes GitHub repos for Magento, Shopify, and Wake ecommerce
+  integrations, plus its open developer documentation for the wallet
+  and PIX APIs under picpay.github.io. PicPay reported a return to
+  profitability in 2023 and is reportedly working with Citigroup on a
+  U.S. IPO.
+tags:
+  - Payments
+  - Digital Wallet
+  - Digital Bank
+  - Neobank
+  - Fintech
+  - PIX
+  - Ecommerce
+  - Checkout
+  - Credit Card
+  - Loans
+  - Investments
+  - Insurance
+  - Brazil
+  - Latin America
+  - Super App
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/picpay/refs/heads/main/apis.yml
+kind: contract
+access: 3rd-Party
+position: Consuming
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: picpay:picpay-ecommerce-checkout-api
+    name: PicPay Ecommerce Checkout API
+    description: >-
+      Public REST API on appws.picpay.com that lets merchants charge a
+      PicPay user's wallet from an ecommerce checkout. Creates a payment
+      with a referenceId, returns a payment URL plus a QR code for the
+      buyer, exposes a status endpoint to poll payment state
+      (created/expired/analysis/paid/completed/refunded/chargeback), and
+      a cancellation endpoint to void unpaid or refund paid orders.
+      Authenticated with the x-picpay-token integration key and
+      x-seller-token seller identifier headers.
+    humanURL: https://picpay.github.io/picpay-docs-digital-payments/checkout/resources/api-reference/
+    tags:
+      - Payments
+      - Wallet
+      - Checkout
+      - Ecommerce
+    properties:
+      - type: Documentation
+        url: https://picpay.github.io/picpay-docs-digital-payments/checkout/resources/api-reference/
+      - type: Documentation
+        url: https://developers-business.picpay.com/wallet/en/checkout/resources/api-reference
+      - type: Authentication
+        url: https://developers-business.picpay.com/wallet/en/checkout/authentication
+      - type: Webhook
+        url: https://developers-business.picpay.com/wallet/en/checkout/guides/notifications
+  - aid: picpay:picpay-gateway-checkout-api
+    name: PicPay Gateway Checkout API
+    description: >-
+      Unified payment gateway API for accepting credit cards, PIX, and
+      the PicPay wallet through transparent, standard, or lightbox
+      checkout flows. Exposes charges, charge cancellation, card vault
+      storage, card validation, 3DS authentication, recurring payments,
+      and BIN lookup. Authenticated with OAuth 2.0 client_credentials
+      bearer JWTs minted at api.picpay.com/oauth2/token.
+    humanURL: https://developers-business.picpay.com/checkout/docs/api/ecommerce-checkout-api
+    tags:
+      - Payments
+      - Gateway
+      - Credit Card
+      - PIX
+      - 3DS
+      - Recurring Payments
+    properties:
+      - type: Documentation
+        url: https://developers-business.picpay.com/checkout/docs/api/ecommerce-checkout-api
+      - type: Documentation
+        url: https://developers-business.picpay.com/checkout
+      - type: Authentication
+        url: https://developers-business.picpay.com/checkout/en/docs/authentication
+  - aid: picpay:picpay-pix-api
+    name: PicPay PIX API
+    description: >-
+      REST API for accepting PIX (Brazil's instant payment rail) as a
+      payment method in ecommerce. Supports PIX cobrança (charge / QR
+      code generation), payment confirmation, refunds, and webhook
+      notification of paid charges. Authenticated with an OAuth 2.0
+      access token obtained from the PicPay authorization server.
+    humanURL: https://picpay.github.io/picpay-docs-digital-payments/
+    tags:
+      - Payments
+      - PIX
+      - Instant Payments
+      - QR Code
+    properties:
+      - type: Documentation
+        url: https://picpay.github.io/picpay-docs-digital-payments/
+      - type: Documentation
+        url: https://developers-business.picpay.com/pix
+      - type: Authentication
+        url: https://developers-business.picpay.com/pix/en/docs/api/token
+  - aid: picpay:picpay-payment-link-api
+    name: PicPay Payment Link API
+    description: >-
+      Lets merchants accept remote sales by generating a hosted PicPay
+      checkout link that can be paid with credit card, PIX, or the
+      PicPay wallet. Useful for social-commerce, invoicing, and
+      conversational sales channels that don't have a full storefront
+      integration.
+    humanURL: https://developers-business.picpay.com/payment-link
+    tags:
+      - Payments
+      - Payment Link
+      - Checkout
+      - Remote Sales
+    properties:
+      - type: Documentation
+        url: https://developers-business.picpay.com/payment-link
+common:
+  - type: Website
+    url: https://www.picpay.com
+  - type: Portal
+    url: https://developers-business.picpay.com/en/
+  - type: Documentation
+    url: https://picpay.github.io/picpay-docs-digital-payments/
+  - type: Documentation
+    url: https://picpay.github.io/picpay-docs-ms-ecommerce-checkout/en/docs/introduction/
+  - type: Business
+    url: https://www.picpay.com/site/parapme
+  - type: Product
+    name: PicPay Wallet & Banking
+    url: https://www.picpay.com
+  - type: Product
+    name: PicPay Cofrinho (Yield Account)
+    url: https://www.picpay.com
+  - type: Product
+    name: PicPay Credit Card
+    url: https://www.picpay.com
+  - type: Product
+    name: PicPay Loans
+    url: https://www.picpay.com
+  - type: Product
+    name: PicPay Investments
+    url: https://www.picpay.com
+  - type: Product
+    name: PicPay Insurance
+    url: https://www.picpay.com
+  - type: ParentCompany
+    name: J&F Investimentos
+    url: https://jfinvest.com.br/en/business/picpay/
+  - type: InvestorRelations
+    url: https://investor.picpay.com/
+  - type: Blog
+    url: https://blog.picpay.com/
+  - type: Newsroom
+    url: https://meu.picpay.com/imprensa
+  - type: Careers
+    url: https://carreiras.picpay.com/
+  - type: Support
+    url: https://meu.picpay.com/ajuda
+  - type: Contact
+    name: Negocios PicPay
+    url: mailto:negocios@atendimento.picpay.com
+  - type: GitHubOrganization
+    url: https://github.com/PicPay
+  - type: SDK
+    name: Magento 2 Integration
+    url: https://github.com/PicPay/magento2
+  - type: SDK
+    name: Shopify Integration
+    url: https://github.com/PicPay/ecommerce-integration-shopify
+  - type: SDK
+    name: Wake Commerce Integration
+    url: https://github.com/PicPay/ecommerce-integration-wake
+  - type: Twitter
+    url: https://twitter.com/PicPay
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/picpay
+  - type: YouTube
+    url: https://www.youtube.com/@picpay
+  - type: Instagram
+    url: https://www.instagram.com/picpay
+  - type: TermsOfService
+    url: https://meu.picpay.com/termos-de-uso
+  - type: PrivacyPolicy
+    url: https://meu.picpay.com/politica-de-privacidade
+  - type: AppStore
+    name: PicPay iOS
+    url: https://apps.apple.com/br/app/picpay-conta-cart%C3%A3o-e-pix/id606130353
+  - type: PlayStore
+    name: PicPay Android
+    url: https://play.google.com/store/apps/details?id=com.picpay
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
