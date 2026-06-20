@@ -40,7 +40,7 @@ tags:
   - Brazil
   - Latin America
   - Super App
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/picpay/refs/heads/main/apis.yml
 kind: contract
 access: 3rd-Party
