@@ -73,7 +73,7 @@ apis:
         url: https://developers-business.picpay.com/wallet/en/checkout/resources/api-reference
       - type: Authentication
         url: https://developers-business.picpay.com/wallet/en/checkout/authentication
-      - type: Webhook
+      - type: Webhooks
         url: https://developers-business.picpay.com/wallet/en/checkout/guides/notifications
   - aid: picpay:picpay-gateway-checkout-api
     name: PicPay Gateway Checkout API
@@ -184,13 +184,13 @@ common:
     url: mailto:negocios@atendimento.picpay.com
   - type: GitHubOrganization
     url: https://github.com/PicPay
-  - type: SDK
+  - type: SDKs
     name: Magento 2 Integration
     url: https://github.com/PicPay/magento2
-  - type: SDK
+  - type: SDKs
     name: Shopify Integration
     url: https://github.com/PicPay/ecommerce-integration-shopify
-  - type: SDK
+  - type: SDKs
     name: Wake Commerce Integration
     url: https://github.com/PicPay/ecommerce-integration-wake
   - type: Twitter
