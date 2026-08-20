@@ -30,6 +30,22 @@ tags:
   - Digital Bank
   - Neobank
   - Fintech
+  - Pix
+  - E-Commerce
+  - Checkout
+  - Credit Card
+  - Loans
+  - Investments
+  - Insurance
+  - Brazil
+  - Latin America
+  - Super App
+tags_raw:
+  - Payments
+  - Digital Wallet
+  - Digital Bank
+  - Neobank
+  - Fintech
   - PIX
   - Ecommerce
   - Checkout
@@ -74,6 +90,11 @@ apis:
     humanURL: https://picpay.github.io/picpay-docs-digital-payments/checkout/resources/api-reference/
     tags:
       - Payments
+      - Wallets
+      - Checkout
+      - E-Commerce
+    tags_raw:
+      - Payments
       - Wallet
       - Checkout
       - Ecommerce
@@ -100,6 +121,13 @@ apis:
       - Payments
       - Gateway
       - Credit Card
+      - Pix
+      - 3DS
+      - Recurring Payments
+    tags_raw:
+      - Payments
+      - Gateway
+      - Credit Card
       - PIX
       - 3DS
       - Recurring Payments
@@ -120,6 +148,11 @@ apis:
       access token obtained from the PicPay authorization server.
     humanURL: https://picpay.github.io/picpay-docs-digital-payments/
     tags:
+      - Payments
+      - Pix
+      - Instant Payments
+      - QR Code
+    tags_raw:
       - Payments
       - PIX
       - Instant Payments
