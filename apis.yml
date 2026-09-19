@@ -33,9 +33,9 @@ tags:
   - Pix
   - E-Commerce
   - Checkout
-  - Credit Card
+  - Credit Cards
   - Loans
-  - Investments
+  - Investment
   - Insurance
   - Brazil
   - Latin America
@@ -130,10 +130,10 @@ apis:
     humanURL: https://developers-business.picpay.com/checkout/docs/api/ecommerce-checkout-api
     tags:
       - Payments
-      - Gateway
-      - Credit Card
+      - Gateways
+      - Credit Cards
       - Pix
-      - 3DS
+      - 3D
       - Recurring Payments
     tags_raw:
       - Payments
@@ -162,7 +162,7 @@ apis:
       - Payments
       - Pix
       - Instant Payments
-      - QR Code
+      - QR Codes
     tags_raw:
       - Payments
       - PIX
@@ -185,6 +185,11 @@ apis:
       integration.
     humanURL: https://developers-business.picpay.com/payment-link
     tags:
+      - Payments
+      - Payment Links
+      - Checkout
+      - Remote Sales
+    tags_raw:
       - Payments
       - Payment Link
       - Checkout
