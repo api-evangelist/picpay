@@ -55,3 +55,32 @@
     detected: '2026-10-12'
   status: not-a-workflow
   arazzo: null
+- slug: picpay-openid-foundation-certification
+  label: OpenID Foundation certification
+  partner_name: OpenID Foundation certification
+  type: contract
+  channel: network-directory
+  evidence: https://openid.net/developers/certified-openid-connect-implementations/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: OpenID Foundation certified implementations
+    spec_file: null
+    role: certified-op,certified-rp
+    registered_name: PicPay Serviços S.A.
+    products:
+    - PicPay Open Finance RP v2.0
+    - pp-oidc-provider 3.0.0
+    matched_domain: picpay.com
+    api_families:
+    - BR-OF Adv. OP DCR (FAPI-BR-v2)
+    - BR-OF Adv. OP w/Private Key, PAR (FAPI-BR-v2)
+    - BR-OF Adv. RP w/Private Key, PAR (FAPI-BR-v2)
+    - fapi1-op-brazil-open-banking
+    - fapi1-op-brazil-open-finance-fapi-br-v2
+    - fapi1-rp-brazil-open-finance-fapi-br-v2
+    api_families_basis: conformance profiles / certification levels passed
+    detected_by: sweep-identity.py
+    detected: '2026-10-13'
+  status: not-a-workflow
+  arazzo: null
