@@ -15,6 +15,35 @@ checked:
 summary: null
 marketplace_apps: []
 edges:
+- partner_name: OpenID Foundation certification
+  partner: null
+  partner_match: domain
+  type: contract
+  channel: network-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://openid.net/developers/certified-openid-connect-implementations/
+  contract_reference:
+    register: OpenID Foundation certified implementations
+    spec_file: null
+    role: certified-op,certified-rp
+    registered_name: PicPay Serviços S.A.
+    products:
+    - PicPay Open Finance RP v2.0
+    - pp-oidc-provider 3.0.0
+    matched_domain: picpay.com
+    api_families:
+    - BR-OF Adv. OP DCR (FAPI-BR-v2)
+    - BR-OF Adv. OP w/Private Key, PAR (FAPI-BR-v2)
+    - BR-OF Adv. RP w/Private Key, PAR (FAPI-BR-v2)
+    - fapi1-op-brazil-open-banking
+    - fapi1-op-brazil-open-finance-fapi-br-v2
+    - fapi1-rp-brazil-open-finance-fapi-br-v2
+    api_families_basis: conformance profiles / certification levels passed
+    detected_by: sweep-identity.py
+    detected: '2026-10-13'
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
 - partner_name: Open Finance Brasil
   partner: null
   type: contract
@@ -63,34 +92,5 @@ edges:
     - payments-recurring-consents-automatic
     - resources
     detected_by: sweep-standard-registers.py
-    detected: '2026-10-12'
-- partner_name: OpenID Foundation certification
-  partner: null
-  partner_match: domain
-  type: contract
-  channel: network-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://openid.net/developers/certified-openid-connect-implementations/
-  contract_reference:
-    register: OpenID Foundation certified implementations
-    spec_file: null
-    role: certified-op,certified-rp
-    registered_name: PicPay Serviços S.A.
-    products:
-    - PicPay Open Finance RP v2.0
-    - pp-oidc-provider 3.0.0
-    matched_domain: picpay.com
-    api_families:
-    - BR-OF Adv. OP DCR (FAPI-BR-v2)
-    - BR-OF Adv. OP w/Private Key, PAR (FAPI-BR-v2)
-    - BR-OF Adv. RP w/Private Key, PAR (FAPI-BR-v2)
-    - fapi1-op-brazil-open-banking
-    - fapi1-op-brazil-open-finance-fapi-br-v2
-    - fapi1-rp-brazil-open-finance-fapi-br-v2
-    api_families_basis: conformance profiles / certification levels passed
-    detected_by: sweep-identity.py
-    detected: '2026-10-13'
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
+    detected: '2026-10-14'
 templates: []
