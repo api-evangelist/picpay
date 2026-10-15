@@ -11,6 +11,7 @@ checked:
 - https://monid.ai/tools/picpay
 - https://n8n.io/integrations/picpay/
 - https://openid.net/developers/certified-openid-connect-implementations/
+- https://www.bcb.gov.br/estabilidadefinanceira/participantespix
 - https://zapier.com/apps/picpay/integrations
 summary: null
 marketplace_apps: []
@@ -93,4 +94,125 @@ edges:
     - resources
     detected_by: sweep-standard-registers.py
     detected: '2026-10-14'
+- partner_name: Open Finance Brasil functional certification
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://data.directory.openbankingbrasil.org.br/participants
+  category: open finance conformance (Brazil)
+  contract_reference:
+    register: Open Finance Brasil directory, per-family CertificationStatus (submissions in github.com/OpenBanking-Brasil/conformance)
+    spec_file: null
+    standard: Open Finance Brasil
+    role: certified-participant
+    registrations:
+    - registered_name: PICPAY
+      register_id: c0f47d95-78e7-5f20-b0ea-ff8a75a44a76
+      cnpj: '22896431000110'
+      matched_domain: picpay.com
+      matched_by: domain
+    certified_products:
+    - product: accounts
+      families:
+      - accounts
+      - credit-cards-accounts
+      status: Self-Certified
+      expires: '2027-07-27'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/accounts/2.5.1/22896431_Contas251_accounts_v2.5.1_27-07-2026.json
+    - product: credit
+      families:
+      - credit-portability
+      - loans
+      status: Self-Certified
+      expires: '2027-05-26'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/loans/2.0.1/22896431_PicPay%20Open%20Banking%202.0.0_loans_v2-OL_07-10-2022.zip
+    - product: customer-data
+      families:
+      - consents
+      - customers-business
+      - customers-personal
+      - resources
+      status: Self-Certified
+      expires: '2027-04-30'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/personal/2.0.1/22896431_PicPay%20Open%20Banking%202.0.0_personal_v2-OL_07-10-2022.zip
+    - product: investments
+      families:
+      - bank-fixed-incomes
+      - funds
+      status: Self-Certified
+      expires: '2027-03-16'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/funds/1.0.0/22896431_4B_funds_v1_24-09-2023.json
+    - product: open-data
+      families:
+      - channels_branches
+      - channels_electronic-channels
+      - channels_phone-channels
+      - opendata-accounts_business-accounts
+      - opendata-accounts_personal-accounts
+      - opendata-acquiring-services_personals
+      - opendata-creditcards_personal-credit-cards
+      - opendata-insurance_personals
+      - opendata-investments_bank-fixed-incomes
+      - opendata-investments_funds
+      - opendata-loans_business-loans
+      - opendata-loans_personal-loans
+      status: Self-Certified
+      expires: '2027-10-14'
+      certification_uri: https://web.conformance.directory.openbankingbrasil.org.br/plan-detail.html?plan=zqAhrEEj9xPdK&public=true
+    - product: payments
+      families:
+      - enrollments
+      - payments-consents
+      - payments-pix
+      status: Self-Certified
+      expires: '2027-10-01'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/enrollments/2.0.0/22896431_no-redirect-payments_test-plan_v2_enrollments_v2.0.0_05-11-2024.json
+    - product: recurring-payments
+      families:
+      - payments-pix-recurring-payments
+      - payments-pix-recurring-payments-automatic
+      - payments-recurring-consents
+      - payments-recurring-consents-automatic
+      status: Self-Certified
+      expires: '2026-11-03'
+      certification_uri: https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/automatic-payments/2.0.0/22896431_automatic-pix_automatic-payments_v2.0.0_17-04-2025.json
+    signal_note: one entry per PRODUCT TYPE, lapsed flagged; family counts are context, never read
+    detected_by: sweep-latam-open-finance.py
+    detected: '2026-10-15'
+  detected_by: sweep-latam-open-finance.py
+  first_seen: '2026-10-15'
+- partner_name: Pix (Banco Central do Brasil)
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.bcb.gov.br/estabilidadefinanceira/participantespix
+  category: instant payments (Brazil)
+  contract_reference:
+    register: Pix participants (Banco Central do Brasil, https://www.bcb.gov.br/content/estabilidadefinanceira/participantes_pix/lista-participantes-instituicoes-em-adesao-pix-20261015.csv)
+    spec_file: null
+    standard: Pix
+    role: pix-participant
+    registrations:
+    - registered_name: PICPAY
+      ispb: '22896431'
+      cnpj: 22.896.431/0001-10
+      institution_type: Instituição de Pagamento
+      spi_participation: Direta
+      pix_participation: Facultativa
+      pix_modality: Provedor de Conta Transacional
+      payment_initiation: true
+      matched_domain: picpay.com
+      matched_by: domain
+      identity: Open Finance Brasil directory, same CNPJ 22896431000110 ('PICPAY')
+    signal_note: 'participation only: the domain comes from a labelled lookup (registrations[].identity)'
+    detected_by: sweep-latam-open-finance.py
+    detected: '2026-10-15'
+  detected_by: sweep-latam-open-finance.py
+  first_seen: '2026-10-15'
 templates: []
