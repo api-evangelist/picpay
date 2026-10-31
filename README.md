@@ -1,4 +1,4 @@
-# picpay
+# PicPay
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,4 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PicPay — Brazilian digital wallet, neobank, and ecommerce payments super-app (J&F Investimentos)
+PicPay is a Brazilian fintech super-app and digital bank serving over 67 million users with a digital wallet, payment account, credit and debit cards, personal loans, investments (Cofrinho / fixed income), insurance, and PIX-based money movement. Founded in 2012 and acquired by J&F Investimentos (the holding company behind JBS) in 2015, PicPay is controlled today by J&F Participações and in 2024 incorporated the retail customer base of Banco Original to consolidate the group's consumer banking strategy. For developers and merchants, PicPay Business exposes a set of REST APIs that let online stores accept the PicPay wallet, credit/debit cards, PIX, and payment links as payment methods. The historical Ecommerce Public API on appws.picpay.com is authenticated with the x-picpay-token / x-seller-token headers and remains in use for direct wallet checkout. A newer unified business developer portal at developers-business.picpay.com publishes the Gateway PicPay Checkout API, Carteira PicPay Wallet API, PIX API, and Payment Link API, all of which now use OAuth 2.0 client_credentials bearer JWTs minted at api.picpay.com/oauth2/token (5-minute TTL) and webhook callbacks for payment status notifications. PicPay also publishes GitHub repos for Magento, Shopify, and Wake ecommerce integrations, plus its open developer documentation for the wallet and PIX APIs under picpay.github.io. PicPay reported a return to profitability in 2023 and is reportedly working with Citigroup on a U.S. IPO.
+
+**Areas:** Payments · Digital Wallet · Digital Bank · Neobank · Fintech · Pix · E-Commerce · Checkout · Credit Cards · Loans · Investment · Insurance
+
+## PicPay on APIs.io
+
+Everything profiled for PicPay is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/picpay/](https://apis.io/providers/picpay/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [PicPay Ecommerce Checkout API](https://apis.io/apis/picpay/picpay-ecommerce-checkout-api/) — Public REST API on appws.picpay.com that lets merchants charge a PicPay user's wallet from an ecommerce checkout. Creates a payment with a referenceId,…
+- [PicPay Gateway Checkout API](https://apis.io/apis/picpay/picpay-gateway-checkout-api/) — Unified payment gateway API for accepting credit cards, PIX, and the PicPay wallet through transparent, standard, or lightbox checkout flows. Exposes…
+- [PicPay PIX API](https://apis.io/apis/picpay/picpay-pix-api/) — REST API for accepting PIX (Brazil's instant payment rail) as a payment method in ecommerce. Supports PIX cobrança (charge / QR code generation), payment…
+- [PicPay Payment Link API](https://apis.io/apis/picpay/picpay-payment-link-api/) — Lets merchants accept remote sales by generating a hosted PicPay checkout link that can be paid with credit card, PIX, or the PicPay wallet. Useful for…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Picpay Domain Security](https://apis.io/security/picpay/picpay-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.picpay.com)
+- [Documentation](https://picpay.github.io/picpay-docs-digital-payments/)
+- [Support](https://meu.picpay.com/ajuda)
+- [Blog](https://blog.picpay.com/)
+- [Terms of service](https://meu.picpay.com/termos-de-uso)
+- [Privacy policy](https://meu.picpay.com/politica-de-privacidade)
+- [GitHub](https://github.com/PicPay)
+
+## API Evangelist rating
+
+**Kin Score 19.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 63.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 6.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/picpay/](https://apis.io/providers/picpay/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PicPay: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/picpay/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
